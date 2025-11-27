@@ -6,7 +6,7 @@ import asyncio
 import json
 from datetime import datetime
 
-TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+TOKEN = "TOKEN"
 CHANNEL_ID = "@your_channel"
 
 bot = Bot(TOKEN)
