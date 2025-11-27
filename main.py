@@ -1,3 +1,18 @@
+import os
+print("=== ДЕБАГ ТОКЕНА ===")
+print("os.getenv('TOKEN')  →", repr(os.getenv("TOKEN")))
+print("Длина токена       →", len(os.getenv("TOKEN") or ""))
+print("os.environ.get('TOKEN') →", repr(os.environ.get("TOKEN")))
+print("Все переменные окружения (первые 10):")
+for i, key in enumerate(sorted(os.environ.keys())):
+    if i >= 10: break
+    value = os.environ[key]
+    if "TOKEN" in key.upper():
+        print(f"  {key} = {repr(value)}")
+    else:
+        print(f"  {key} = {repr(value[:30])}...")
+print("======================")
+
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram.types import FSInputFile
