@@ -24,7 +24,7 @@ from datetime import datetime
 TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 CHANNEL_ID = "@your_channel"
 
-bot = Bot(TOKEN)
+bot = Bot(token=TOKEN)
 dp = Dispatcher()
 scheduler = AsyncIOScheduler()
 DB_FILE = "posts.json"
