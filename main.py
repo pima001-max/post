@@ -24,6 +24,9 @@ from datetime import datetime
 TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 CHANNEL_ID = "@your_channel"
 
+# Отключаем кривую валидацию в aiogram 3.21–3.22
+Bot.__init__.__globals__['validate_token'] = lambda x: None
+
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 scheduler = AsyncIOScheduler()
